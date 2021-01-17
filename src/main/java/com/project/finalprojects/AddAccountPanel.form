@@ -22,12 +22,12 @@
                   <Group type="102" alignment="0" attributes="0">
                       <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="category" pref="377" max="32767" attributes="0"/>
+                      <Component id="accountLevel" pref="377" max="32767" attributes="0"/>
                   </Group>
                   <Group type="102" alignment="1" attributes="0">
                       <Component id="jLabel3" min="-2" pref="114" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="itemName1" max="32767" attributes="0"/>
+                      <Component id="password" max="32767" attributes="0"/>
                   </Group>
                   <Group type="102" alignment="1" attributes="0">
                       <Group type="103" groupAlignment="1" max="-2" attributes="0">
@@ -36,8 +36,8 @@
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                          <Component id="itemName" max="32767" attributes="0"/>
-                          <Component id="price1" pref="378" max="32767" attributes="0"/>
+                          <Component id="username" max="32767" attributes="0"/>
+                          <Component id="fullname" pref="378" max="32767" attributes="0"/>
                       </Group>
                   </Group>
               </Group>
@@ -50,23 +50,23 @@
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="price1" alignment="3" min="-2" pref="33" max="-2" attributes="0"/>
+                  <Component id="fullname" alignment="3" min="-2" pref="33" max="-2" attributes="0"/>
                   <Component id="jLabel4" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="itemName" alignment="3" min="-2" pref="32" max="-2" attributes="0"/>
+                  <Component id="username" alignment="3" min="-2" pref="32" max="-2" attributes="0"/>
                   <Component id="jLabel1" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="jLabel3" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="itemName1" alignment="3" min="-2" pref="32" max="-2" attributes="0"/>
+                  <Component id="password" alignment="3" min="-2" pref="32" max="-2" attributes="0"/>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="jLabel2" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="category" alignment="3" min="-2" pref="34" max="-2" attributes="0"/>
+                  <Component id="accountLevel" alignment="3" min="-2" pref="34" max="-2" attributes="0"/>
               </Group>
               <EmptySpace pref="23" max="32767" attributes="0"/>
           </Group>
@@ -74,15 +74,15 @@
     </DimensionLayout>
   </Layout>
   <SubComponents>
-    <Component class="javax.swing.JTextField" name="itemName">
+    <Component class="javax.swing.JTextField" name="username">
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="itemNameActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="usernameActionPerformed"/>
       </Events>
       <AuxValues>
         <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
       </AuxValues>
     </Component>
-    <Component class="javax.swing.JComboBox" name="category">
+    <Component class="javax.swing.JComboBox" name="accountLevel">
       <Properties>
         <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
           <StringArray count="4">
@@ -116,7 +116,7 @@
         <Property name="text" type="java.lang.String" value="Account Level:"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="price1">
+    <Component class="javax.swing.JTextField" name="fullname">
       <AuxValues>
         <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
       </AuxValues>
@@ -130,9 +130,9 @@
         <Property name="text" type="java.lang.String" value="Full Name:"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="itemName1">
+    <Component class="javax.swing.JTextField" name="password">
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="itemName1ActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="passwordActionPerformed"/>
       </Events>
       <AuxValues>
         <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>

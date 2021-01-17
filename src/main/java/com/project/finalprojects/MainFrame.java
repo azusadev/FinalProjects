@@ -16,7 +16,8 @@ public class MainFrame extends javax.swing.JFrame {
      */
     public MainFrame() {
         initComponents();
-        mainTabPane.addTab("Menu", new MenuPanel());        
+        MenuPanel mp = new MenuPanel();
+        mainTabPane.addTab("Menu", mp);        
         mainTabPane.addTab("Products", new ProductPanel());
         mainTabPane.addTab("Accounts", new AccountPanel());
     }
