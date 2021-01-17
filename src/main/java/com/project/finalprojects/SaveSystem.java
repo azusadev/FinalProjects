@@ -74,7 +74,12 @@ public class SaveSystem {
         if(!fileName.isBlank())
         {
             try {
-                Scanner sc = new Scanner(new File(fileName + ".txt"));
+                File file = new File(fileName + ".txt");
+                if(!file.exists())
+                {
+                    file.createNewFile();
+                }
+                Scanner sc = new Scanner(file);
                 while(sc.hasNextLine())
                 {
                     String[] s = sc.nextLine().split(":");
