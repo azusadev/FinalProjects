@@ -19,7 +19,7 @@ public class SaveSystem {
     
     public static void Save(String fileName, ArrayList<Account> account)
     {
-        if(!fileName.isBlank())
+        if(!fileName.isEmpty())
         {
             try {
                 
@@ -46,7 +46,7 @@ public class SaveSystem {
   
     public static void Save(String fileName, Account account)
     {
-        if(!fileName.isBlank())
+        if(!fileName.isEmpty())
         {
             try {
                 
@@ -71,7 +71,7 @@ public class SaveSystem {
     public static ArrayList<Account> Load(String fileName)
     {
         ArrayList<Account> list = new ArrayList<>();
-        if(!fileName.isBlank())
+        if(!fileName.isEmpty())
         {
             try {
                 File file = new File(fileName + ".txt");

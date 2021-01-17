@@ -159,7 +159,7 @@ public class AccountPanel extends javax.swing.JPanel {
                         JOptionPane.OK_CANCEL_OPTION,
                         JOptionPane.PLAIN_MESSAGE);
        
-        if(value == JOptionPane.OK_OPTION && !panel.username.getText().isBlank() && !panel.password.getText().isBlank() && !panel.fullname.getText().isBlank()){
+        if(value == JOptionPane.OK_OPTION && !panel.username.getText().isEmpty() && !panel.password.getText().isEmpty() && !panel.fullname.getText().isEmpty()){
             SimpleDateFormat formatter = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");  
             Date date = new Date();  
             AccountLevel level = AccountLevel.Manager;
@@ -211,7 +211,7 @@ public class AccountPanel extends javax.swing.JPanel {
                         JOptionPane.OK_CANCEL_OPTION,
                         JOptionPane.PLAIN_MESSAGE);
        
-        if(value == JOptionPane.OK_OPTION && !panel.username.getText().isBlank() && !panel.password.getText().isBlank() && !panel.fullname.getText().isBlank()){ 
+        if(value == JOptionPane.OK_OPTION && !panel.username.getText().isEmpty() && !panel.password.getText().isEmpty() && !panel.fullname.getText().isEmpty()){ 
             AccountLevel level = AccountLevel.Manager;
             switch(String.valueOf(panel.accountLevel.getSelectedItem()))
             {
