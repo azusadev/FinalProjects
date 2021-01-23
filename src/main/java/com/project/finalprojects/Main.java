@@ -30,14 +30,18 @@ public class Main extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        Header = new javax.swing.JPanel();
-        main = new javax.swing.JPanel();
-        receipt = new javax.swing.JPanel();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
-        mainArea = new javax.swing.JPanel();
-        mCategory1 = new com.project.finalprojects.MCategory();
-        mMenu1 = new com.project.finalprojects.MMenu();
+        jPanel1 = new javax.swing.JPanel();
+        categoryItem1 = new com.project.finalprojects.CategoryItem();
+        categoryItem2 = new com.project.finalprojects.CategoryItem();
+        categoryItem3 = new com.project.finalprojects.CategoryItem();
+        categoryItem13 = new com.project.finalprojects.CategoryItem();
+        categoryItem14 = new com.project.finalprojects.CategoryItem();
+        categoryItem15 = new com.project.finalprojects.CategoryItem();
+        categoryItem16 = new com.project.finalprojects.CategoryItem();
+        categoryItem17 = new com.project.finalprojects.CategoryItem();
+        categoryItem18 = new com.project.finalprojects.CategoryItem();
+        categoryItem19 = new com.project.finalprojects.CategoryItem();
+        categoryItem20 = new com.project.finalprojects.CategoryItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setLocationByPlatform(true);
@@ -46,49 +50,35 @@ public class Main extends javax.swing.JFrame {
         setPreferredSize(new java.awt.Dimension(1366, 768));
         setResizable(false);
 
-        Header.setPreferredSize(new java.awt.Dimension(0, 100));
+        jPanel1.setLayout(new javax.swing.BoxLayout(jPanel1, javax.swing.BoxLayout.LINE_AXIS));
+        jPanel1.add(categoryItem1);
+        jPanel1.add(categoryItem2);
+        jPanel1.add(categoryItem3);
+        jPanel1.add(categoryItem13);
+        jPanel1.add(categoryItem14);
+        jPanel1.add(categoryItem15);
+        jPanel1.add(categoryItem16);
+        jPanel1.add(categoryItem17);
+        jPanel1.add(categoryItem18);
+        jPanel1.add(categoryItem19);
+        jPanel1.add(categoryItem20);
 
-        javax.swing.GroupLayout HeaderLayout = new javax.swing.GroupLayout(Header);
-        Header.setLayout(HeaderLayout);
-        HeaderLayout.setHorizontalGroup(
-            HeaderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1366, Short.MAX_VALUE)
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+        getContentPane().setLayout(layout);
+        layout.setHorizontalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
-        HeaderLayout.setVerticalGroup(
-            HeaderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(548, Short.MAX_VALUE)
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
         );
-
-        getContentPane().add(Header, java.awt.BorderLayout.NORTH);
-
-        main.setLayout(new javax.swing.BoxLayout(main, javax.swing.BoxLayout.LINE_AXIS));
-
-        receipt.setPreferredSize(new java.awt.Dimension(500, 600));
-
-        jScrollPane1.setPreferredSize(new java.awt.Dimension(480, 600));
-
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-
-            },
-            new String [] {
-                "Item", "Quantity", "Title 3"
-            }
-        ));
-        jScrollPane1.setViewportView(jTable1);
-
-        receipt.add(jScrollPane1);
-
-        main.add(receipt);
-
-        mainArea.setPreferredSize(new java.awt.Dimension(850, 600));
-        mainArea.setLayout(new javax.swing.BoxLayout(mainArea, javax.swing.BoxLayout.PAGE_AXIS));
-        mainArea.add(mCategory1);
-        mainArea.add(mMenu1);
-
-        main.add(mainArea);
-
-        getContentPane().add(main, java.awt.BorderLayout.CENTER);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -129,13 +119,17 @@ public class Main extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JPanel Header;
-    private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTable jTable1;
-    private com.project.finalprojects.MCategory mCategory1;
-    private com.project.finalprojects.MMenu mMenu1;
-    private javax.swing.JPanel main;
-    private javax.swing.JPanel mainArea;
-    private javax.swing.JPanel receipt;
+    private com.project.finalprojects.CategoryItem categoryItem1;
+    private com.project.finalprojects.CategoryItem categoryItem13;
+    private com.project.finalprojects.CategoryItem categoryItem14;
+    private com.project.finalprojects.CategoryItem categoryItem15;
+    private com.project.finalprojects.CategoryItem categoryItem16;
+    private com.project.finalprojects.CategoryItem categoryItem17;
+    private com.project.finalprojects.CategoryItem categoryItem18;
+    private com.project.finalprojects.CategoryItem categoryItem19;
+    private com.project.finalprojects.CategoryItem categoryItem2;
+    private com.project.finalprojects.CategoryItem categoryItem20;
+    private com.project.finalprojects.CategoryItem categoryItem3;
+    private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
 }
