@@ -18,7 +18,6 @@ public class Main extends javax.swing.JFrame {
      */
     public Main() {
         initComponents();
-        this.setExtendedState(JFrame.MAXIMIZED_BOTH); 
     }
 
     /**
@@ -44,10 +43,8 @@ public class Main extends javax.swing.JFrame {
         categoryItem20 = new com.project.finalprojects.CategoryItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setLocationByPlatform(true);
         setName("RESTAURANT"); // NOI18N
-        setUndecorated(true);
-        setPreferredSize(new java.awt.Dimension(1366, 768));
+        setPreferredSize(new java.awt.Dimension(1200, 700));
         setResizable(false);
 
         jPanel1.setLayout(new javax.swing.BoxLayout(jPanel1, javax.swing.BoxLayout.LINE_AXIS));
