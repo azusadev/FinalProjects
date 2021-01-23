@@ -37,7 +37,7 @@ public class MCategory extends javax.swing.JPanel {
 
         jScrollPane1.setBorder(null);
         jScrollPane1.setVerticalScrollBarPolicy(javax.swing.ScrollPaneConstants.VERTICAL_SCROLLBAR_NEVER);
-        jScrollPane1.setPreferredSize(new java.awt.Dimension(1150, 60));
+        jScrollPane1.setPreferredSize(new java.awt.Dimension(820, 60));
 
         container.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.LEFT, 5, 10));
 

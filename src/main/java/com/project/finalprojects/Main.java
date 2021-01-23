@@ -35,7 +35,7 @@ public class Main extends javax.swing.JFrame {
         receipt = new javax.swing.JPanel();
         mainArea = new javax.swing.JPanel();
         mCategory1 = new com.project.finalprojects.MCategory();
-        mMenu2 = new com.project.finalprojects.MMenu();
+        mMenu1 = new com.project.finalprojects.MMenu();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setLocationByPlatform(true);
@@ -61,13 +61,13 @@ public class Main extends javax.swing.JFrame {
 
         main.setLayout(new javax.swing.BoxLayout(main, javax.swing.BoxLayout.LINE_AXIS));
 
-        receipt.setPreferredSize(new java.awt.Dimension(300, 773));
+        receipt.setPreferredSize(new java.awt.Dimension(500, 773));
 
         javax.swing.GroupLayout receiptLayout = new javax.swing.GroupLayout(receipt);
         receipt.setLayout(receiptLayout);
         receiptLayout.setHorizontalGroup(
             receiptLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 895, Short.MAX_VALUE)
+            .addGap(0, 918, Short.MAX_VALUE)
         );
         receiptLayout.setVerticalGroup(
             receiptLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -76,10 +76,10 @@ public class Main extends javax.swing.JFrame {
 
         main.add(receipt);
 
-        mainArea.setPreferredSize(new java.awt.Dimension(700, 773));
+        mainArea.setPreferredSize(new java.awt.Dimension(850, 773));
         mainArea.setLayout(new javax.swing.BoxLayout(mainArea, javax.swing.BoxLayout.PAGE_AXIS));
         mainArea.add(mCategory1);
-        mainArea.add(mMenu2);
+        mainArea.add(mMenu1);
 
         main.add(mainArea);
 
@@ -126,7 +126,7 @@ public class Main extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel Header;
     private com.project.finalprojects.MCategory mCategory1;
-    private com.project.finalprojects.MMenu mMenu2;
+    private com.project.finalprojects.MMenu mMenu1;
     private javax.swing.JPanel main;
     private javax.swing.JPanel mainArea;
     private javax.swing.JPanel receipt;

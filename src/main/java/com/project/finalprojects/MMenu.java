@@ -35,15 +35,15 @@ public class MMenu extends javax.swing.JPanel {
         addMenu = new javax.swing.JButton();
 
         jScrollPane1.setBorder(null);
-        jScrollPane1.setPreferredSize(new java.awt.Dimension(1150, 600));
+        jScrollPane1.setPreferredSize(new java.awt.Dimension(820, 600));
 
         jPanel1.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.CENTER, 0, 0));
 
         menuPanel.setAutoscrolls(true);
-        menuPanel.setLayout(new java.awt.GridLayout(0, 7));
+        menuPanel.setLayout(new java.awt.GridLayout(0, 7, 10, 10));
 
         addMenu.setText("+");
-        addMenu.setPreferredSize(new java.awt.Dimension(160, 150));
+        addMenu.setPreferredSize(new java.awt.Dimension(100, 100));
         addMenu.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 addMenuActionPerformed(evt);
