@@ -33,6 +33,8 @@ public class Main extends javax.swing.JFrame {
         Header = new javax.swing.JPanel();
         main = new javax.swing.JPanel();
         receipt = new javax.swing.JPanel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTable1 = new javax.swing.JTable();
         mainArea = new javax.swing.JPanel();
         mCategory1 = new com.project.finalprojects.MCategory();
         mMenu1 = new com.project.finalprojects.MMenu();
@@ -63,15 +65,31 @@ public class Main extends javax.swing.JFrame {
 
         receipt.setPreferredSize(new java.awt.Dimension(500, 773));
 
+        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+
+            },
+            new String [] {
+                "Item", "Quantity", "Title 3"
+            }
+        ));
+        jScrollPane1.setViewportView(jTable1);
+
         javax.swing.GroupLayout receiptLayout = new javax.swing.GroupLayout(receipt);
         receipt.setLayout(receiptLayout);
         receiptLayout.setHorizontalGroup(
             receiptLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 918, Short.MAX_VALUE)
+            .addGroup(receiptLayout.createSequentialGroup()
+                .addGap(102, 102, 102)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 671, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(150, Short.MAX_VALUE))
         );
         receiptLayout.setVerticalGroup(
             receiptLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 773, Short.MAX_VALUE)
+            .addGroup(receiptLayout.createSequentialGroup()
+                .addGap(30, 30, 30)
+                .addComponent(jScrollPane1)
+                .addGap(316, 316, 316))
         );
 
         main.add(receipt);
@@ -125,6 +143,8 @@ public class Main extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel Header;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTable jTable1;
     private com.project.finalprojects.MCategory mCategory1;
     private com.project.finalprojects.MMenu mMenu1;
     private javax.swing.JPanel main;
