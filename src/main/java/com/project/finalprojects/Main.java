@@ -52,7 +52,7 @@ public class Main extends javax.swing.JFrame {
         Header.setLayout(HeaderLayout);
         HeaderLayout.setHorizontalGroup(
             HeaderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 2183, Short.MAX_VALUE)
+            .addGap(0, 1366, Short.MAX_VALUE)
         );
         HeaderLayout.setVerticalGroup(
             HeaderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -63,7 +63,9 @@ public class Main extends javax.swing.JFrame {
 
         main.setLayout(new javax.swing.BoxLayout(main, javax.swing.BoxLayout.LINE_AXIS));
 
-        receipt.setPreferredSize(new java.awt.Dimension(500, 773));
+        receipt.setPreferredSize(new java.awt.Dimension(500, 600));
+
+        jScrollPane1.setPreferredSize(new java.awt.Dimension(480, 600));
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -75,26 +77,11 @@ public class Main extends javax.swing.JFrame {
         ));
         jScrollPane1.setViewportView(jTable1);
 
-        javax.swing.GroupLayout receiptLayout = new javax.swing.GroupLayout(receipt);
-        receipt.setLayout(receiptLayout);
-        receiptLayout.setHorizontalGroup(
-            receiptLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(receiptLayout.createSequentialGroup()
-                .addGap(102, 102, 102)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 671, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(150, Short.MAX_VALUE))
-        );
-        receiptLayout.setVerticalGroup(
-            receiptLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(receiptLayout.createSequentialGroup()
-                .addGap(30, 30, 30)
-                .addComponent(jScrollPane1)
-                .addGap(316, 316, 316))
-        );
+        receipt.add(jScrollPane1);
 
         main.add(receipt);
 
-        mainArea.setPreferredSize(new java.awt.Dimension(850, 773));
+        mainArea.setPreferredSize(new java.awt.Dimension(850, 600));
         mainArea.setLayout(new javax.swing.BoxLayout(mainArea, javax.swing.BoxLayout.PAGE_AXIS));
         mainArea.add(mCategory1);
         mainArea.add(mMenu1);
