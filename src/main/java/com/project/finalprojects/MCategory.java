@@ -5,8 +5,8 @@
  */
 package com.project.finalprojects;
 
+import javax.swing.JButton;
 import javax.swing.JFrame;
-import javax.swing.SwingUtilities;
 
 /**
  *
@@ -30,9 +30,18 @@ public class MCategory extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jScrollPane1 = new javax.swing.JScrollPane();
+        container = new javax.swing.JPanel();
+        categoryPanel = new javax.swing.JPanel();
         addButton = new javax.swing.JButton();
 
-        setLayout(new javax.swing.BoxLayout(this, javax.swing.BoxLayout.LINE_AXIS));
+        jScrollPane1.setBorder(null);
+        jScrollPane1.setVerticalScrollBarPolicy(javax.swing.ScrollPaneConstants.VERTICAL_SCROLLBAR_NEVER);
+        jScrollPane1.setPreferredSize(new java.awt.Dimension(800, 120));
+
+        container.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.LEFT, 5, 10));
+
+        categoryPanel.setLayout(new java.awt.GridLayout());
 
         addButton.setText("+");
         addButton.setPreferredSize(new java.awt.Dimension(80, 80));
@@ -41,23 +50,27 @@ public class MCategory extends javax.swing.JPanel {
                 addButtonActionPerformed(evt);
             }
         });
-        add(addButton);
+        categoryPanel.add(addButton);
+
+        container.add(categoryPanel);
+
+        jScrollPane1.setViewportView(container);
+
+        add(jScrollPane1);
     }// </editor-fold>//GEN-END:initComponents
 
     private void addButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addButtonActionPerformed
-        javax.swing.JButton categoryButton = new javax.swing.JButton();
-
-        categoryButton.setText("CHICKEN JOY");
-        categoryButton.setPreferredSize(new java.awt.Dimension(80, 80));
-        add(categoryButton);
+        // TODO add your handling code here:
+        categoryPanel.add(new JButton("MENU 1"),0);
         repaint();
         revalidate();
-        Main topFrame = (Main) SwingUtilities.getWindowAncestor(this);
-        topFrame.menu_p.add(new MMenu());
     }//GEN-LAST:event_addButtonActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton addButton;
+    private javax.swing.JPanel categoryPanel;
+    private javax.swing.JPanel container;
+    private javax.swing.JScrollPane jScrollPane1;
     // End of variables declaration//GEN-END:variables
 }

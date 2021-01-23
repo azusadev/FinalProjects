@@ -5,6 +5,8 @@
  */
 package com.project.finalprojects;
 
+import javax.swing.JButton;
+
 /**
  *
  * @author reden
@@ -27,51 +29,46 @@ public class MMenu extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
-        jButton5 = new javax.swing.JButton();
-        jButton6 = new javax.swing.JButton();
-        jButton7 = new javax.swing.JButton();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jPanel1 = new javax.swing.JPanel();
+        menuPanel = new javax.swing.JPanel();
+        addMenu = new javax.swing.JButton();
 
-        jButton1.setText("jButton1");
-        jButton1.setPreferredSize(new java.awt.Dimension(100, 100));
-        add(jButton1);
+        jScrollPane1.setBorder(null);
+        jScrollPane1.setPreferredSize(new java.awt.Dimension(800, 600));
 
-        jButton2.setText("jButton1");
-        jButton2.setPreferredSize(new java.awt.Dimension(100, 100));
-        add(jButton2);
+        jPanel1.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.CENTER, 0, 0));
 
-        jButton3.setText("jButton1");
-        jButton3.setPreferredSize(new java.awt.Dimension(100, 100));
-        add(jButton3);
+        menuPanel.setAutoscrolls(true);
+        menuPanel.setLayout(new java.awt.GridLayout(0, 5));
 
-        jButton4.setText("jButton1");
-        jButton4.setPreferredSize(new java.awt.Dimension(100, 100));
-        add(jButton4);
+        addMenu.setText("+");
+        addMenu.setPreferredSize(new java.awt.Dimension(150, 100));
+        addMenu.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                addMenuActionPerformed(evt);
+            }
+        });
+        menuPanel.add(addMenu);
 
-        jButton5.setText("jButton1");
-        jButton5.setPreferredSize(new java.awt.Dimension(100, 100));
-        add(jButton5);
+        jPanel1.add(menuPanel);
 
-        jButton6.setText("jButton1");
-        jButton6.setPreferredSize(new java.awt.Dimension(100, 100));
-        add(jButton6);
+        jScrollPane1.setViewportView(jPanel1);
 
-        jButton7.setText("jButton1");
-        jButton7.setPreferredSize(new java.awt.Dimension(100, 100));
-        add(jButton7);
+        add(jScrollPane1);
     }// </editor-fold>//GEN-END:initComponents
+
+    private void addMenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addMenuActionPerformed
+        menuPanel.add(new JButton("MENU 1"),0);
+        repaint();
+        revalidate();
+    }//GEN-LAST:event_addMenuActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton5;
-    private javax.swing.JButton jButton6;
-    private javax.swing.JButton jButton7;
+    private javax.swing.JButton addMenu;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JPanel menuPanel;
     // End of variables declaration//GEN-END:variables
 }
