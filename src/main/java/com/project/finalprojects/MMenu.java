@@ -35,15 +35,15 @@ public class MMenu extends javax.swing.JPanel {
         addMenu = new javax.swing.JButton();
 
         jScrollPane1.setBorder(null);
-        jScrollPane1.setPreferredSize(new java.awt.Dimension(800, 600));
+        jScrollPane1.setPreferredSize(new java.awt.Dimension(1150, 600));
 
         jPanel1.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.CENTER, 0, 0));
 
         menuPanel.setAutoscrolls(true);
-        menuPanel.setLayout(new java.awt.GridLayout(0, 5));
+        menuPanel.setLayout(new java.awt.GridLayout(0, 7));
 
         addMenu.setText("+");
-        addMenu.setPreferredSize(new java.awt.Dimension(150, 100));
+        addMenu.setPreferredSize(new java.awt.Dimension(160, 150));
         addMenu.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 addMenuActionPerformed(evt);
@@ -59,7 +59,7 @@ public class MMenu extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     private void addMenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addMenuActionPerformed
-        menuPanel.add(new JButton("MENU 1"),0);
+        menuPanel.add(new JButton("MENU 1"));
         repaint();
         revalidate();
     }//GEN-LAST:event_addMenuActionPerformed

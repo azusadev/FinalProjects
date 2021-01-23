@@ -5,6 +5,8 @@
  */
 package com.project.finalprojects;
 
+import javax.swing.JFrame;
+
 /**
  *
  * @author reden
@@ -16,6 +18,7 @@ public class Main extends javax.swing.JFrame {
      */
     public Main() {
         initComponents();
+        this.setExtendedState(JFrame.MAXIMIZED_BOTH); 
     }
 
     /**
@@ -27,31 +30,60 @@ public class Main extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        mMenu1 = new com.project.finalprojects.MMenu();
-        mCategory2 = new com.project.finalprojects.MCategory();
+        Header = new javax.swing.JPanel();
+        main = new javax.swing.JPanel();
+        receipt = new javax.swing.JPanel();
+        mainArea = new javax.swing.JPanel();
+        mCategory1 = new com.project.finalprojects.MCategory();
+        mMenu2 = new com.project.finalprojects.MMenu();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setLocationByPlatform(true);
+        setName("RESTAURANT"); // NOI18N
+        setUndecorated(true);
+        setPreferredSize(new java.awt.Dimension(1366, 768));
+        setResizable(false);
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(mCategory2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(mMenu1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        Header.setPreferredSize(new java.awt.Dimension(0, 100));
+
+        javax.swing.GroupLayout HeaderLayout = new javax.swing.GroupLayout(Header);
+        Header.setLayout(HeaderLayout);
+        HeaderLayout.setHorizontalGroup(
+            HeaderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 2183, Short.MAX_VALUE)
         );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(32, 32, 32)
-                .addComponent(mCategory2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(mMenu1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(83, Short.MAX_VALUE))
+        HeaderLayout.setVerticalGroup(
+            HeaderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 0, Short.MAX_VALUE)
         );
+
+        getContentPane().add(Header, java.awt.BorderLayout.NORTH);
+
+        main.setLayout(new javax.swing.BoxLayout(main, javax.swing.BoxLayout.LINE_AXIS));
+
+        receipt.setPreferredSize(new java.awt.Dimension(300, 773));
+
+        javax.swing.GroupLayout receiptLayout = new javax.swing.GroupLayout(receipt);
+        receipt.setLayout(receiptLayout);
+        receiptLayout.setHorizontalGroup(
+            receiptLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 895, Short.MAX_VALUE)
+        );
+        receiptLayout.setVerticalGroup(
+            receiptLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 773, Short.MAX_VALUE)
+        );
+
+        main.add(receipt);
+
+        mainArea.setPreferredSize(new java.awt.Dimension(700, 773));
+        mainArea.setLayout(new javax.swing.BoxLayout(mainArea, javax.swing.BoxLayout.PAGE_AXIS));
+        mainArea.add(mCategory1);
+        mainArea.add(mMenu2);
+
+        main.add(mainArea);
+
+        getContentPane().add(main, java.awt.BorderLayout.CENTER);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -92,7 +124,11 @@ public class Main extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private com.project.finalprojects.MCategory mCategory2;
-    private com.project.finalprojects.MMenu mMenu1;
+    private javax.swing.JPanel Header;
+    private com.project.finalprojects.MCategory mCategory1;
+    private com.project.finalprojects.MMenu mMenu2;
+    private javax.swing.JPanel main;
+    private javax.swing.JPanel mainArea;
+    private javax.swing.JPanel receipt;
     // End of variables declaration//GEN-END:variables
 }

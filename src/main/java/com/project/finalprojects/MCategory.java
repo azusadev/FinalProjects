@@ -37,14 +37,14 @@ public class MCategory extends javax.swing.JPanel {
 
         jScrollPane1.setBorder(null);
         jScrollPane1.setVerticalScrollBarPolicy(javax.swing.ScrollPaneConstants.VERTICAL_SCROLLBAR_NEVER);
-        jScrollPane1.setPreferredSize(new java.awt.Dimension(800, 120));
+        jScrollPane1.setPreferredSize(new java.awt.Dimension(1150, 60));
 
         container.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.LEFT, 5, 10));
 
-        categoryPanel.setLayout(new java.awt.GridLayout());
+        categoryPanel.setLayout(new java.awt.GridLayout(1, 0));
 
         addButton.setText("+");
-        addButton.setPreferredSize(new java.awt.Dimension(80, 80));
+        addButton.setPreferredSize(new java.awt.Dimension(150, 40));
         addButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 addButtonActionPerformed(evt);
@@ -61,7 +61,7 @@ public class MCategory extends javax.swing.JPanel {
 
     private void addButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addButtonActionPerformed
         // TODO add your handling code here:
-        categoryPanel.add(new JButton("MENU 1"),0);
+        categoryPanel.add(new JButton("MENU 1"));
         repaint();
         revalidate();
     }//GEN-LAST:event_addButtonActionPerformed
