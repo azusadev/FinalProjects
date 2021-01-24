@@ -17,5 +17,5 @@ public class ColorTheme {
     public static Color secondaryColor = Color.decode("#1e232e");
     public static Color accentColor = Color.decode("#263352");
     public static Color highlightColor = Color.decode("#51596b");
-
+    public static Color secondaryHighlightColor = Color.decode("#3c424f");
 }

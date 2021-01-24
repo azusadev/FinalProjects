@@ -22,7 +22,7 @@ public class customTitleBar extends javax.swing.JPanel {
      */
     public customTitleBar() {
         initComponents();
-        this.setBackground(ColorTheme.accentColor);
+        this.setBackground(ColorTheme.secondaryColor);
     }
 
     /**

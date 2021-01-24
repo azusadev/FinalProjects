@@ -14,7 +14,7 @@ import javax.swing.SwingUtilities;
  */
 public class CategoryItem extends javax.swing.JPanel{
 
-    
+    public boolean isActive = false;
     /**
      * Creates new form CategoryItem
      */
@@ -25,6 +25,15 @@ public class CategoryItem extends javax.swing.JPanel{
         revalidate();
     }
 
+    public CategoryItem(String name, String iconPath) {
+        initComponents();
+        categoryName.setText("<html><div style='text-align: center;'>" + name + "</div></html>");
+        icon.setIcon(new javax.swing.ImageIcon(getClass().getResource(iconPath)));
+        this.setBackground(ColorTheme.secondaryColor);
+        repaint();
+        revalidate();
+    }
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -34,81 +43,101 @@ public class CategoryItem extends javax.swing.JPanel{
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jPanel1 = new javax.swing.JPanel();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
+        mouseInteract = new javax.swing.JPanel();
+        icon = new javax.swing.JLabel();
+        categoryName = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(20, 20, 20));
-        setMaximumSize(new java.awt.Dimension(170, 80));
-        setPreferredSize(new java.awt.Dimension(170, 80));
+        setMaximumSize(new java.awt.Dimension(180, 50));
+        setPreferredSize(new java.awt.Dimension(180, 50));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jPanel1.setOpaque(false);
-        jPanel1.addMouseListener(new java.awt.event.MouseAdapter() {
+        mouseInteract.setOpaque(false);
+        mouseInteract.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                mouseInteractMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                mouseInteractMouseExited(evt);
+            }
             public void mousePressed(java.awt.event.MouseEvent evt) {
-                jPanel1MousePressed(evt);
+                mouseInteractMousePressed(evt);
             }
             public void mouseReleased(java.awt.event.MouseEvent evt) {
-                jPanel1MouseReleased(evt);
+                mouseInteractMouseReleased(evt);
             }
         });
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 170, Short.MAX_VALUE)
+        javax.swing.GroupLayout mouseInteractLayout = new javax.swing.GroupLayout(mouseInteract);
+        mouseInteract.setLayout(mouseInteractLayout);
+        mouseInteractLayout.setHorizontalGroup(
+            mouseInteractLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 180, Short.MAX_VALUE)
         );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 80, Short.MAX_VALUE)
+        mouseInteractLayout.setVerticalGroup(
+            mouseInteractLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 50, Short.MAX_VALUE)
         );
 
-        add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 170, 80));
+        add(mouseInteract, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 180, 50));
 
-        jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/chicken.png"))); // NOI18N
-        jLabel3.setFocusable(false);
-        jLabel3.setRequestFocusEnabled(false);
-        jLabel3.setVerifyInputWhenFocusTarget(false);
-        add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 70, 60));
+        icon.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        icon.setIcon(new javax.swing.ImageIcon(getClass().getResource("/chicken.png"))); // NOI18N
+        icon.setFocusable(false);
+        icon.setRequestFocusEnabled(false);
+        icon.setVerifyInputWhenFocusTarget(false);
+        add(icon, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 40, 50));
 
-        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/square-of-rounded-corners.png"))); // NOI18N
-        jLabel1.setFocusable(false);
-        jLabel1.setRequestFocusEnabled(false);
-        jLabel1.setVerifyInputWhenFocusTarget(false);
-        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 70, 60));
-
-        jLabel4.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel4.setText("<html><div style='text-align: center;'>Dessert & Beverages</div></html>");
-        jLabel4.setToolTipText("");
-        jLabel4.setFocusable(false);
-        jLabel4.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        jLabel4.setRequestFocusEnabled(false);
-        jLabel4.setVerifyInputWhenFocusTarget(false);
-        add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 10, 90, 60));
+        categoryName.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        categoryName.setForeground(new java.awt.Color(255, 255, 255));
+        categoryName.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        categoryName.setText("<html><div style='text-align: center;'>Dessert & Beverages</div></html>");
+        categoryName.setToolTipText("");
+        categoryName.setFocusable(false);
+        categoryName.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        categoryName.setRequestFocusEnabled(false);
+        categoryName.setVerifyInputWhenFocusTarget(false);
+        add(categoryName, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 0, 140, 50));
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jPanel1MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel1MousePressed
+    private void mouseInteractMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_mouseInteractMousePressed
         // TODO add your handling code here:
-        this.setBackground(ColorTheme.highlightColor);
-    }//GEN-LAST:event_jPanel1MousePressed
+        Category category = (Category)getParent().getParent().getParent().getParent().getParent();
+        if(category.selectedItem != this)
+        {
+            category.selectedItem = this;
+            category.resetAllBackground();
+            isActive = true;
+            this.setBackground(ColorTheme.highlightColor);
+        }
+    }//GEN-LAST:event_mouseInteractMousePressed
 
-    private void jPanel1MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel1MouseReleased
+    private void mouseInteractMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_mouseInteractMouseReleased
         // TODO add your handling code here:
         //resetColor();
-    }//GEN-LAST:event_jPanel1MouseReleased
+    }//GEN-LAST:event_mouseInteractMouseReleased
 
+    private void mouseInteractMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_mouseInteractMouseEntered
+        // TODO add your handling code here:
+        if(!isActive) this.setBackground(ColorTheme.secondaryHighlightColor);
+    }//GEN-LAST:event_mouseInteractMouseEntered
 
+    private void mouseInteractMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_mouseInteractMouseExited
+        // TODO add your handling code here:
+        if(!isActive) this.setBackground(ColorTheme.secondaryColor);
+        else this.setBackground(ColorTheme.highlightColor);
+    }//GEN-LAST:event_mouseInteractMouseExited
+
+    public void resetBackground()
+    {
+        isActive = false;
+        this.setBackground(ColorTheme.secondaryColor);
+    }
+    
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JPanel jPanel1;
+    private javax.swing.JLabel categoryName;
+    private javax.swing.JLabel icon;
+    private javax.swing.JPanel mouseInteract;
     // End of variables declaration//GEN-END:variables
 
 

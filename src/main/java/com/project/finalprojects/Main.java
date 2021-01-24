@@ -28,13 +28,7 @@ public class Main extends javax.swing.JFrame {
     public Main() {
         initComponents();
         getContentPane().setBackground(ColorTheme.primaryColor);
-        jScrollPane1.getHorizontalScrollBar().setPreferredSize(new Dimension(0,0));
-        jScrollPane1.getHorizontalScrollBar().setUnitIncrement(36);
-        jScrollPane1.getViewport().setBorder(null);
-        jScrollPane1.setViewportBorder(null);
-        jScrollPane1.setBorder(null);
-        jPanel1.setBackground(ColorTheme.primaryColor);
-        menuPanel.setBackground(ColorTheme.primaryColor);
+        
     }
 
     /**
@@ -46,21 +40,8 @@ public class Main extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jScrollPane1 = new javax.swing.JScrollPane();
-        jPanel1 = new javax.swing.JPanel();
-        menuPanel = new javax.swing.JPanel();
-        categoryItem1 = new com.project.finalprojects.CategoryItem();
-        categoryItem3 = new com.project.finalprojects.CategoryItem();
-        categoryItem2 = new com.project.finalprojects.CategoryItem();
-        categoryItem5 = new com.project.finalprojects.CategoryItem();
-        categoryItem6 = new com.project.finalprojects.CategoryItem();
-        categoryItem7 = new com.project.finalprojects.CategoryItem();
-        categoryItem8 = new com.project.finalprojects.CategoryItem();
-        categoryItem9 = new com.project.finalprojects.CategoryItem();
-        categoryItem10 = new com.project.finalprojects.CategoryItem();
-        categoryItem11 = new com.project.finalprojects.CategoryItem();
-        categoryItem12 = new com.project.finalprojects.CategoryItem();
         customTitleBar1 = new com.project.finalprojects.customTitleBar();
+        category1 = new com.project.finalprojects.Category();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(51, 51, 51));
@@ -70,47 +51,23 @@ public class Main extends javax.swing.JFrame {
         setUndecorated(true);
         setResizable(false);
 
-        jScrollPane1.setToolTipText("");
-        jScrollPane1.setVerticalScrollBarPolicy(javax.swing.ScrollPaneConstants.VERTICAL_SCROLLBAR_NEVER);
-        jScrollPane1.setPreferredSize(new java.awt.Dimension(1200, 90));
-
-        jPanel1.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.LEFT, 0, 0));
-
-        menuPanel.setAutoscrolls(true);
-        menuPanel.setLayout(new java.awt.GridLayout(1, 0, 5, 0));
-        menuPanel.add(categoryItem1);
-        menuPanel.add(categoryItem3);
-        menuPanel.add(categoryItem2);
-        menuPanel.add(categoryItem5);
-        menuPanel.add(categoryItem6);
-        menuPanel.add(categoryItem7);
-        menuPanel.add(categoryItem8);
-        menuPanel.add(categoryItem9);
-        menuPanel.add(categoryItem10);
-        menuPanel.add(categoryItem11);
-        menuPanel.add(categoryItem12);
-
-        jPanel1.add(menuPanel);
-
-        jScrollPane1.setViewportView(jPanel1);
-
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 800, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(customTitleBar1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(customTitleBar1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(category1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(0, 0, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addComponent(customTitleBar1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(87, 87, 87)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(503, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(category1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(564, Short.MAX_VALUE))
         );
 
         pack();
@@ -152,21 +109,8 @@ public class Main extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private com.project.finalprojects.CategoryItem categoryItem1;
-    private com.project.finalprojects.CategoryItem categoryItem10;
-    private com.project.finalprojects.CategoryItem categoryItem11;
-    private com.project.finalprojects.CategoryItem categoryItem12;
-    private com.project.finalprojects.CategoryItem categoryItem2;
-    private com.project.finalprojects.CategoryItem categoryItem3;
-    private com.project.finalprojects.CategoryItem categoryItem5;
-    private com.project.finalprojects.CategoryItem categoryItem6;
-    private com.project.finalprojects.CategoryItem categoryItem7;
-    private com.project.finalprojects.CategoryItem categoryItem8;
-    private com.project.finalprojects.CategoryItem categoryItem9;
+    private com.project.finalprojects.Category category1;
     private com.project.finalprojects.customTitleBar customTitleBar1;
-    private javax.swing.JPanel jPanel1;
-    private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JPanel menuPanel;
     // End of variables declaration//GEN-END:variables
 
 }
