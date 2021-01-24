@@ -19,6 +19,7 @@ public class MCategory extends javax.swing.JPanel {
      */
     public MCategory() {
         initComponents();
+        
     }
 
     /**

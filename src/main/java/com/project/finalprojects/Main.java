@@ -5,7 +5,15 @@
  */
 package com.project.finalprojects;
 
+import java.awt.Dimension;
+import java.awt.Point;
+import java.awt.Rectangle;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
+import java.io.IOException;
 import javax.swing.JFrame;
+import javax.swing.JViewport;
+import javax.swing.SwingUtilities;
 
 /**
  *
@@ -18,6 +26,39 @@ public class Main extends javax.swing.JFrame {
      */
     public Main() {
         initComponents();
+        jScrollPane1.getHorizontalScrollBar().setPreferredSize(new Dimension(0,0));
+        jScrollPane1.getHorizontalScrollBar().setUnitIncrement(36);
+        jScrollPane1.getViewport().setBorder(null);
+        jScrollPane1.setViewportBorder(null);
+        jScrollPane1.setBorder(null);
+        
+        MouseAdapter mouseAdapter = new MouseAdapter() {
+            
+            int mouseStartX;            
+            int mouseStartY;
+
+            @Override
+            public void mousePressed(MouseEvent e) {
+
+                mouseStartX = e.getX();
+                mouseStartY = e.getY();
+
+            }
+            
+            @Override
+            public void mouseDragged(MouseEvent e) {
+
+                JViewport viewPort = jScrollPane1.getViewport();
+                Point vpp = viewPort.getViewPosition();
+                vpp.translate(mouseStartX-e.getX(), mouseStartY-e.getY());
+                jPanel1.scrollRectToVisible(new Rectangle(vpp, viewPort.getSize()));
+
+            }
+
+        };
+
+        jScrollPane1.getViewport().addMouseListener(mouseAdapter);
+        jScrollPane1.getViewport().addMouseMotionListener(mouseAdapter);
     }
 
     /**
@@ -29,52 +70,90 @@ public class Main extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jScrollPane1 = new javax.swing.JScrollPane();
         jPanel1 = new javax.swing.JPanel();
-        categoryItem1 = new com.project.finalprojects.CategoryItem();
-        categoryItem2 = new com.project.finalprojects.CategoryItem();
-        categoryItem3 = new com.project.finalprojects.CategoryItem();
-        categoryItem13 = new com.project.finalprojects.CategoryItem();
-        categoryItem14 = new com.project.finalprojects.CategoryItem();
-        categoryItem15 = new com.project.finalprojects.CategoryItem();
-        categoryItem16 = new com.project.finalprojects.CategoryItem();
-        categoryItem17 = new com.project.finalprojects.CategoryItem();
-        categoryItem18 = new com.project.finalprojects.CategoryItem();
-        categoryItem19 = new com.project.finalprojects.CategoryItem();
-        categoryItem20 = new com.project.finalprojects.CategoryItem();
+        menuPanel = new javax.swing.JPanel();
+        categoryItem23 = new com.project.finalprojects.CategoryItem();
+        categoryItem24 = new com.project.finalprojects.CategoryItem();
+        categoryItem25 = new com.project.finalprojects.CategoryItem();
+        categoryItem26 = new com.project.finalprojects.CategoryItem();
+        categoryItem27 = new com.project.finalprojects.CategoryItem();
+        categoryItem28 = new com.project.finalprojects.CategoryItem();
+        categoryItem29 = new com.project.finalprojects.CategoryItem();
+        categoryItem30 = new com.project.finalprojects.CategoryItem();
+        categoryItem31 = new com.project.finalprojects.CategoryItem();
+        categoryItem32 = new com.project.finalprojects.CategoryItem();
+        categoryItem33 = new com.project.finalprojects.CategoryItem();
+        categoryItem34 = new com.project.finalprojects.CategoryItem();
+        categoryItem35 = new com.project.finalprojects.CategoryItem();
+        categoryItem36 = new com.project.finalprojects.CategoryItem();
+        categoryItem37 = new com.project.finalprojects.CategoryItem();
+        categoryItem38 = new com.project.finalprojects.CategoryItem();
+        categoryItem39 = new com.project.finalprojects.CategoryItem();
+        categoryItem40 = new com.project.finalprojects.CategoryItem();
+        categoryItem41 = new com.project.finalprojects.CategoryItem();
+        categoryItem42 = new com.project.finalprojects.CategoryItem();
+        categoryItem43 = new com.project.finalprojects.CategoryItem();
+        categoryItem44 = new com.project.finalprojects.CategoryItem();
+        categoryItem45 = new com.project.finalprojects.CategoryItem();
+        categoryItem46 = new com.project.finalprojects.CategoryItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setBackground(new java.awt.Color(51, 51, 51));
+        setLocationByPlatform(true);
+        setMaximumSize(new java.awt.Dimension(1200, 700));
+        setMinimumSize(new java.awt.Dimension(1200, 700));
         setName("RESTAURANT"); // NOI18N
         setPreferredSize(new java.awt.Dimension(1200, 700));
-        setResizable(false);
 
-        jPanel1.setLayout(new javax.swing.BoxLayout(jPanel1, javax.swing.BoxLayout.LINE_AXIS));
-        jPanel1.add(categoryItem1);
-        jPanel1.add(categoryItem2);
-        jPanel1.add(categoryItem3);
-        jPanel1.add(categoryItem13);
-        jPanel1.add(categoryItem14);
-        jPanel1.add(categoryItem15);
-        jPanel1.add(categoryItem16);
-        jPanel1.add(categoryItem17);
-        jPanel1.add(categoryItem18);
-        jPanel1.add(categoryItem19);
-        jPanel1.add(categoryItem20);
+        jScrollPane1.setToolTipText("");
+        jScrollPane1.setVerticalScrollBarPolicy(javax.swing.ScrollPaneConstants.VERTICAL_SCROLLBAR_NEVER);
+        jScrollPane1.setPreferredSize(new java.awt.Dimension(1200, 165));
+
+        jPanel1.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.CENTER, 0, 0));
+
+        menuPanel.setAutoscrolls(true);
+        menuPanel.setLayout(new java.awt.GridLayout(1, 0, 10, 0));
+        menuPanel.add(categoryItem23);
+        menuPanel.add(categoryItem24);
+        menuPanel.add(categoryItem25);
+        menuPanel.add(categoryItem26);
+        menuPanel.add(categoryItem27);
+        menuPanel.add(categoryItem28);
+        menuPanel.add(categoryItem29);
+        menuPanel.add(categoryItem30);
+        menuPanel.add(categoryItem31);
+        menuPanel.add(categoryItem32);
+        menuPanel.add(categoryItem33);
+        menuPanel.add(categoryItem34);
+        menuPanel.add(categoryItem35);
+        menuPanel.add(categoryItem36);
+        menuPanel.add(categoryItem37);
+        menuPanel.add(categoryItem38);
+        menuPanel.add(categoryItem39);
+        menuPanel.add(categoryItem40);
+        menuPanel.add(categoryItem41);
+        menuPanel.add(categoryItem42);
+        menuPanel.add(categoryItem43);
+        menuPanel.add(categoryItem44);
+        menuPanel.add(categoryItem45);
+        menuPanel.add(categoryItem46);
+
+        jPanel1.add(menuPanel);
+
+        jScrollPane1.setViewportView(jPanel1);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(548, Short.MAX_VALUE)
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
+                .addGap(0, 561, Short.MAX_VALUE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 139, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
         pack();
@@ -116,17 +195,32 @@ public class Main extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private com.project.finalprojects.CategoryItem categoryItem1;
-    private com.project.finalprojects.CategoryItem categoryItem13;
-    private com.project.finalprojects.CategoryItem categoryItem14;
-    private com.project.finalprojects.CategoryItem categoryItem15;
-    private com.project.finalprojects.CategoryItem categoryItem16;
-    private com.project.finalprojects.CategoryItem categoryItem17;
-    private com.project.finalprojects.CategoryItem categoryItem18;
-    private com.project.finalprojects.CategoryItem categoryItem19;
-    private com.project.finalprojects.CategoryItem categoryItem2;
-    private com.project.finalprojects.CategoryItem categoryItem20;
-    private com.project.finalprojects.CategoryItem categoryItem3;
+    private com.project.finalprojects.CategoryItem categoryItem23;
+    private com.project.finalprojects.CategoryItem categoryItem24;
+    private com.project.finalprojects.CategoryItem categoryItem25;
+    private com.project.finalprojects.CategoryItem categoryItem26;
+    private com.project.finalprojects.CategoryItem categoryItem27;
+    private com.project.finalprojects.CategoryItem categoryItem28;
+    private com.project.finalprojects.CategoryItem categoryItem29;
+    private com.project.finalprojects.CategoryItem categoryItem30;
+    private com.project.finalprojects.CategoryItem categoryItem31;
+    private com.project.finalprojects.CategoryItem categoryItem32;
+    private com.project.finalprojects.CategoryItem categoryItem33;
+    private com.project.finalprojects.CategoryItem categoryItem34;
+    private com.project.finalprojects.CategoryItem categoryItem35;
+    private com.project.finalprojects.CategoryItem categoryItem36;
+    private com.project.finalprojects.CategoryItem categoryItem37;
+    private com.project.finalprojects.CategoryItem categoryItem38;
+    private com.project.finalprojects.CategoryItem categoryItem39;
+    private com.project.finalprojects.CategoryItem categoryItem40;
+    private com.project.finalprojects.CategoryItem categoryItem41;
+    private com.project.finalprojects.CategoryItem categoryItem42;
+    private com.project.finalprojects.CategoryItem categoryItem43;
+    private com.project.finalprojects.CategoryItem categoryItem44;
+    private com.project.finalprojects.CategoryItem categoryItem45;
+    private com.project.finalprojects.CategoryItem categoryItem46;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JPanel menuPanel;
     // End of variables declaration//GEN-END:variables
 }

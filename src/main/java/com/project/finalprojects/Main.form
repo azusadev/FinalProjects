@@ -3,11 +3,20 @@
 <Form version="1.8" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JFrameFormInfo">
   <Properties>
     <Property name="defaultCloseOperation" type="int" value="3"/>
+    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+      <Color blue="33" green="33" red="33" type="rgb"/>
+    </Property>
+    <Property name="locationByPlatform" type="boolean" value="true"/>
+    <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+      <Dimension value="[1200, 700]"/>
+    </Property>
+    <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+      <Dimension value="[1200, 700]"/>
+    </Property>
     <Property name="name" type="java.lang.String" value="RESTAURANT" noResource="true"/>
     <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
       <Dimension value="[1200, 700]"/>
     </Property>
-    <Property name="resizable" type="boolean" value="false"/>
   </Properties>
   <SyntheticProperties>
     <SyntheticProperty name="formSizePolicy" type="int" value="1"/>
@@ -23,55 +32,106 @@
     <AuxValue name="FormSettings_listenerGenerationStyle" type="java.lang.Integer" value="0"/>
     <AuxValue name="FormSettings_variablesLocal" type="java.lang.Boolean" value="false"/>
     <AuxValue name="FormSettings_variablesModifier" type="java.lang.Integer" value="2"/>
+    <AuxValue name="designerSize" type="java.awt.Dimension" value="-84,-19,0,5,115,114,0,18,106,97,118,97,46,97,119,116,46,68,105,109,101,110,115,105,111,110,65,-114,-39,-41,-84,95,68,20,2,0,2,73,0,6,104,101,105,103,104,116,73,0,5,119,105,100,116,104,120,112,0,0,2,-68,0,0,4,-80"/>
   </AuxValues>
 
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Group type="102" attributes="0">
-              <EmptySpace max="-2" attributes="0"/>
-              <Component id="jPanel1" min="-2" max="-2" attributes="0"/>
-              <EmptySpace max="32767" attributes="0"/>
-          </Group>
+          <Component id="jScrollPane1" alignment="1" min="-2" max="-2" attributes="0"/>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="1" attributes="0">
-              <EmptySpace pref="548" max="32767" attributes="0"/>
-              <Component id="jPanel1" min="-2" max="-2" attributes="0"/>
-              <EmptySpace max="-2" attributes="0"/>
+              <EmptySpace min="0" pref="561" max="32767" attributes="0"/>
+              <Component id="jScrollPane1" min="-2" pref="139" max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
   </Layout>
   <SubComponents>
-    <Container class="javax.swing.JPanel" name="jPanel1">
+    <Container class="javax.swing.JScrollPane" name="jScrollPane1">
+      <Properties>
+        <Property name="toolTipText" type="java.lang.String" value=""/>
+        <Property name="verticalScrollBarPolicy" type="int" value="21"/>
+        <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+          <Dimension value="[1200, 165]"/>
+        </Property>
+      </Properties>
 
-      <Layout class="org.netbeans.modules.form.compat2.layouts.DesignBoxLayout"/>
+      <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
       <SubComponents>
-        <Component class="com.project.finalprojects.CategoryItem" name="categoryItem1">
-        </Component>
-        <Component class="com.project.finalprojects.CategoryItem" name="categoryItem2">
-        </Component>
-        <Component class="com.project.finalprojects.CategoryItem" name="categoryItem3">
-        </Component>
-        <Component class="com.project.finalprojects.CategoryItem" name="categoryItem13">
-        </Component>
-        <Component class="com.project.finalprojects.CategoryItem" name="categoryItem14">
-        </Component>
-        <Component class="com.project.finalprojects.CategoryItem" name="categoryItem15">
-        </Component>
-        <Component class="com.project.finalprojects.CategoryItem" name="categoryItem16">
-        </Component>
-        <Component class="com.project.finalprojects.CategoryItem" name="categoryItem17">
-        </Component>
-        <Component class="com.project.finalprojects.CategoryItem" name="categoryItem18">
-        </Component>
-        <Component class="com.project.finalprojects.CategoryItem" name="categoryItem19">
-        </Component>
-        <Component class="com.project.finalprojects.CategoryItem" name="categoryItem20">
-        </Component>
+        <Container class="javax.swing.JPanel" name="jPanel1">
+
+          <Layout class="org.netbeans.modules.form.compat2.layouts.DesignFlowLayout">
+            <Property name="horizontalGap" type="int" value="0"/>
+            <Property name="verticalGap" type="int" value="0"/>
+          </Layout>
+          <SubComponents>
+            <Container class="javax.swing.JPanel" name="menuPanel">
+              <Properties>
+                <Property name="autoscrolls" type="boolean" value="true"/>
+              </Properties>
+
+              <Layout class="org.netbeans.modules.form.compat2.layouts.DesignGridLayout">
+                <Property name="columns" type="int" value="0"/>
+                <Property name="horizontalGap" type="int" value="10"/>
+                <Property name="rows" type="int" value="1"/>
+              </Layout>
+              <SubComponents>
+                <Component class="com.project.finalprojects.CategoryItem" name="categoryItem23">
+                </Component>
+                <Component class="com.project.finalprojects.CategoryItem" name="categoryItem24">
+                </Component>
+                <Component class="com.project.finalprojects.CategoryItem" name="categoryItem25">
+                </Component>
+                <Component class="com.project.finalprojects.CategoryItem" name="categoryItem26">
+                </Component>
+                <Component class="com.project.finalprojects.CategoryItem" name="categoryItem27">
+                </Component>
+                <Component class="com.project.finalprojects.CategoryItem" name="categoryItem28">
+                </Component>
+                <Component class="com.project.finalprojects.CategoryItem" name="categoryItem29">
+                </Component>
+                <Component class="com.project.finalprojects.CategoryItem" name="categoryItem30">
+                </Component>
+                <Component class="com.project.finalprojects.CategoryItem" name="categoryItem31">
+                </Component>
+                <Component class="com.project.finalprojects.CategoryItem" name="categoryItem32">
+                </Component>
+                <Component class="com.project.finalprojects.CategoryItem" name="categoryItem33">
+                </Component>
+                <Component class="com.project.finalprojects.CategoryItem" name="categoryItem34">
+                </Component>
+                <Component class="com.project.finalprojects.CategoryItem" name="categoryItem35">
+                </Component>
+                <Component class="com.project.finalprojects.CategoryItem" name="categoryItem36">
+                </Component>
+                <Component class="com.project.finalprojects.CategoryItem" name="categoryItem37">
+                </Component>
+                <Component class="com.project.finalprojects.CategoryItem" name="categoryItem38">
+                </Component>
+                <Component class="com.project.finalprojects.CategoryItem" name="categoryItem39">
+                </Component>
+                <Component class="com.project.finalprojects.CategoryItem" name="categoryItem40">
+                </Component>
+                <Component class="com.project.finalprojects.CategoryItem" name="categoryItem41">
+                </Component>
+                <Component class="com.project.finalprojects.CategoryItem" name="categoryItem42">
+                </Component>
+                <Component class="com.project.finalprojects.CategoryItem" name="categoryItem43">
+                </Component>
+                <Component class="com.project.finalprojects.CategoryItem" name="categoryItem44">
+                </Component>
+                <Component class="com.project.finalprojects.CategoryItem" name="categoryItem45">
+                </Component>
+                <Component class="com.project.finalprojects.CategoryItem" name="categoryItem46">
+                </Component>
+              </SubComponents>
+            </Container>
+          </SubComponents>
+        </Container>
       </SubComponents>
     </Container>
   </SubComponents>
