@@ -27,7 +27,7 @@ public class AccountPanel extends javax.swing.JPanel {
     public AccountPanel() {
         initComponents();
         accounts = SaveSystem.Load("accounts");
-        UpdateTable();
+        //UpdateTable();
     }
     
     public void UpdateTable()
