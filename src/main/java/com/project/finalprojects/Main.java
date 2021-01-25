@@ -54,7 +54,7 @@ public class Main extends javax.swing.JFrame {
         setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
         getContentPane().add(customTitleBar1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
-        getContentPane().add(category1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 50, 800, -1));
+        getContentPane().add(category1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 50, 780, -1));
         getContentPane().add(receipt1, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 40, -1, -1));
 
         pack();

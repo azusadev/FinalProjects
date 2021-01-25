@@ -37,7 +37,6 @@ public class CategoryItem extends javax.swing.JPanel{
     public CategoryItem(Category category, String name, String iconPath) {
         initComponents();
         categoryName.setText("<html><div style='text-align: center;'>" + name + "</div></html>");
-        icon.setIcon(new javax.swing.ImageIcon(getClass().getResource(iconPath)));
         this.setBackground(ColorTheme.secondaryColor);
         repaint();
         revalidate();
@@ -53,14 +52,16 @@ public class CategoryItem extends javax.swing.JPanel{
     private void initComponents() {
 
         mouseInteract = new javax.swing.JPanel();
-        icon = new javax.swing.JLabel();
         categoryName = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(20, 20, 20));
-        setMaximumSize(new java.awt.Dimension(180, 50));
-        setPreferredSize(new java.awt.Dimension(180, 50));
+        setMaximumSize(new java.awt.Dimension(150, 40));
+        setMinimumSize(new java.awt.Dimension(150, 40));
+        setPreferredSize(new java.awt.Dimension(150, 40));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        mouseInteract.setMaximumSize(new java.awt.Dimension(150, 40));
+        mouseInteract.setMinimumSize(new java.awt.Dimension(150, 40));
         mouseInteract.setOpaque(false);
         mouseInteract.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
@@ -81,21 +82,14 @@ public class CategoryItem extends javax.swing.JPanel{
         mouseInteract.setLayout(mouseInteractLayout);
         mouseInteractLayout.setHorizontalGroup(
             mouseInteractLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 180, Short.MAX_VALUE)
+            .addGap(0, 150, Short.MAX_VALUE)
         );
         mouseInteractLayout.setVerticalGroup(
             mouseInteractLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 50, Short.MAX_VALUE)
+            .addGap(0, 40, Short.MAX_VALUE)
         );
 
-        add(mouseInteract, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 180, 50));
-
-        icon.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        icon.setIcon(new javax.swing.ImageIcon(getClass().getResource("/chicken.png"))); // NOI18N
-        icon.setFocusable(false);
-        icon.setRequestFocusEnabled(false);
-        icon.setVerifyInputWhenFocusTarget(false);
-        add(icon, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 40, 50));
+        add(mouseInteract, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 150, 40));
 
         categoryName.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         categoryName.setForeground(new java.awt.Color(255, 255, 255));
@@ -104,9 +98,12 @@ public class CategoryItem extends javax.swing.JPanel{
         categoryName.setToolTipText("");
         categoryName.setFocusable(false);
         categoryName.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        categoryName.setMaximumSize(new java.awt.Dimension(150, 40));
+        categoryName.setMinimumSize(new java.awt.Dimension(150, 40));
+        categoryName.setPreferredSize(new java.awt.Dimension(150, 40));
         categoryName.setRequestFocusEnabled(false);
         categoryName.setVerifyInputWhenFocusTarget(false);
-        add(categoryName, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 0, 140, 50));
+        add(categoryName, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 150, 40));
     }// </editor-fold>//GEN-END:initComponents
 
     private void mouseInteractMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_mouseInteractMousePressed
@@ -143,7 +140,6 @@ public class CategoryItem extends javax.swing.JPanel{
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel categoryName;
-    private javax.swing.JLabel icon;
     private javax.swing.JPanel mouseInteract;
     // End of variables declaration//GEN-END:variables
 

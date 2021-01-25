@@ -65,13 +65,15 @@ public class Category extends javax.swing.JPanel {
         menuHolder = new javax.swing.JPanel();
         menuPanel = new javax.swing.JPanel();
 
-        setMaximumSize(new java.awt.Dimension(1200, 90));
+        setMaximumSize(new java.awt.Dimension(1200, 40));
+        setMinimumSize(new java.awt.Dimension(1200, 40));
         setName(""); // NOI18N
+        setPreferredSize(new java.awt.Dimension(1200, 40));
         setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.LEFT, 0, 0));
 
         MainScrollPane.setToolTipText("");
         MainScrollPane.setVerticalScrollBarPolicy(javax.swing.ScrollPaneConstants.VERTICAL_SCROLLBAR_NEVER);
-        MainScrollPane.setPreferredSize(new java.awt.Dimension(1200, 60));
+        MainScrollPane.setPreferredSize(new java.awt.Dimension(1200, 40));
 
         menuHolder.setMaximumSize(new java.awt.Dimension(170, 80));
         menuHolder.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.LEFT, 0, 0));
