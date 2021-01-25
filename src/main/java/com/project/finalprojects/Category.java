@@ -29,8 +29,7 @@ public class Category extends javax.swing.JPanel {
         menuHolder.setBackground(ColorTheme.primaryColor);
         menuPanel.setBackground(ColorTheme.primaryColor);
         for (int i = 0; i < 20; i++) {
-            CategoryItem item = new CategoryItem();
-            addCategoryItem(item);
+            addCategoryItem(new CategoryItem(this));
         }
     }
 

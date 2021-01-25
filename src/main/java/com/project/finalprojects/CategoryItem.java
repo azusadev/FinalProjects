@@ -15,6 +15,7 @@ import javax.swing.SwingUtilities;
 public class CategoryItem extends javax.swing.JPanel{
 
     public boolean isActive = false;
+    private Category categoryParent = null;
     /**
      * Creates new form CategoryItem
      */
@@ -24,8 +25,16 @@ public class CategoryItem extends javax.swing.JPanel{
         repaint();
         revalidate();
     }
+    
+    public CategoryItem(Category category) {
+        categoryParent = category;
+        initComponents();
+        this.setBackground(ColorTheme.secondaryColor);
+        repaint();
+        revalidate();
+    }
 
-    public CategoryItem(String name, String iconPath) {
+    public CategoryItem(Category category, String name, String iconPath) {
         initComponents();
         categoryName.setText("<html><div style='text-align: center;'>" + name + "</div></html>");
         icon.setIcon(new javax.swing.ImageIcon(getClass().getResource(iconPath)));
@@ -102,11 +111,10 @@ public class CategoryItem extends javax.swing.JPanel{
 
     private void mouseInteractMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_mouseInteractMousePressed
         // TODO add your handling code here:
-        Category category = (Category)getParent().getParent().getParent().getParent().getParent();
-        if(category.selectedItem != this)
+        if(categoryParent.selectedItem != this)
         {
-            category.selectedItem = this;
-            category.resetAllBackground();
+            categoryParent.selectedItem = this;
+            categoryParent.resetAllBackground();
             isActive = true;
             this.setBackground(ColorTheme.highlightColor);
         }
@@ -119,7 +127,6 @@ public class CategoryItem extends javax.swing.JPanel{
 
     private void mouseInteractMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_mouseInteractMouseEntered
         // TODO add your handling code here:
-        if(!isActive) this.setBackground(ColorTheme.secondaryHighlightColor);
     }//GEN-LAST:event_mouseInteractMouseEntered
 
     private void mouseInteractMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_mouseInteractMouseExited
