@@ -52,10 +52,10 @@
         </Constraint>
       </Constraints>
     </Component>
-    <Component class="com.project.finalprojects.Menu" name="menu1">
+    <Component class="com.project.finalprojects.Category" name="category1">
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="0" y="40" width="-1" height="-1"/>
+          <AbsoluteConstraints x="80" y="40" width="-1" height="-1"/>
         </Constraint>
       </Constraints>
     </Component>

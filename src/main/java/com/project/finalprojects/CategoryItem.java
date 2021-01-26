@@ -27,8 +27,8 @@ public class CategoryItem extends javax.swing.JPanel{
     }
     
     public CategoryItem(Category category) {
-        categoryParent = category;
         initComponents();
+        categoryParent = category;
         this.setBackground(ColorTheme.secondaryColor);
         repaint();
         revalidate();
@@ -128,8 +128,6 @@ public class CategoryItem extends javax.swing.JPanel{
 
     private void mouseInteractMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_mouseInteractMouseExited
         // TODO add your handling code here:
-        if(!isActive) this.setBackground(ColorTheme.secondaryColor);
-        else this.setBackground(ColorTheme.highlightColor);
     }//GEN-LAST:event_mouseInteractMouseExited
 
     public void resetBackground()

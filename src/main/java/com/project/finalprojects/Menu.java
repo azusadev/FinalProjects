@@ -5,27 +5,32 @@
  */
 package com.project.finalprojects;
 
+import java.awt.Dimension;
+
 /**
  *
  * @author reden
  */
 public class Menu extends javax.swing.JPanel {
 
-    
     /**
      * Creates new form Menu
      */
-    public Menu() {
+    public Menu(String categoryName) {
         initComponents();
         this.setBackground(ColorTheme.primaryColor);
+        MainScrollPane.getVerticalScrollBar().setPreferredSize(new Dimension(0,0));
+        MainScrollPane.getVerticalScrollBar().setUnitIncrement(36);
+        MainScrollPane.getViewport().setBorder(null);
+        MainScrollPane.setViewportBorder(null);
+        MainScrollPane.setBorder(null);
+        menuContainer.setBackground(ColorTheme.primaryColor);       
+        menuPanel.setBackground(ColorTheme.primaryColor);
+        for (int i = 0; i < 30; i++) {
+            menuPanel.add(new MenuItem(categoryName + "_" + i));
+        }
     }
 
-    public void addNewMenu(MenuHolder menu)
-    {
-        menu.setVisible(false);
-        holder.add(menu);
-        System.out.println("ADDED!!");
-    }
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -35,42 +40,49 @@ public class Menu extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        holder = new javax.swing.JPanel();
-        category1 = new com.project.finalprojects.Category(this);
+        MainScrollPane = new javax.swing.JScrollPane();
+        menuContainer = new javax.swing.JPanel();
+        menuPanel = new javax.swing.JPanel();
 
-        setMaximumSize(new java.awt.Dimension(780, 660));
-        setMinimumSize(new java.awt.Dimension(780, 660));
+        setMaximumSize(new java.awt.Dimension(660, 600));
+        setMinimumSize(new java.awt.Dimension(660, 600));
+        setPreferredSize(new java.awt.Dimension(660, 600));
 
-        holder.setMaximumSize(new java.awt.Dimension(760, 600));
-        holder.setMinimumSize(new java.awt.Dimension(760, 600));
-        holder.setPreferredSize(new java.awt.Dimension(760, 600));
-        holder.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.CENTER, 0, 0));
+        MainScrollPane.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
+        MainScrollPane.setToolTipText("");
+        MainScrollPane.setMaximumSize(new java.awt.Dimension(660, 600));
+        MainScrollPane.setMinimumSize(new java.awt.Dimension(660, 600));
+        MainScrollPane.setPreferredSize(new java.awt.Dimension(660, 600));
+
+        menuContainer.setMaximumSize(new java.awt.Dimension(640, 250));
+        menuContainer.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.LEFT, 0, 0));
+
+        menuPanel.setAutoscrolls(true);
+        menuPanel.setLayout(new java.awt.GridLayout(0, 5, 15, 15));
+        menuContainer.add(menuPanel);
+
+        MainScrollPane.setViewportView(menuContainer);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(holder, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(category1, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
-                .addContainerGap())
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(MainScrollPane, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(category1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(holder, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addComponent(MainScrollPane, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private com.project.finalprojects.Category category1;
-    public javax.swing.JPanel holder;
+    private javax.swing.JScrollPane MainScrollPane;
+    private javax.swing.JPanel menuContainer;
+    private javax.swing.JPanel menuPanel;
     // End of variables declaration//GEN-END:variables
 }

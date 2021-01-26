@@ -18,23 +18,20 @@ import javax.swing.SwingUtilities;
  */
 public class Category extends javax.swing.JPanel {
 
-    Map<CategoryItem, MenuHolder> menuPerItem = new LinkedHashMap<>();
     ArrayList<CategoryItem> categories = new ArrayList<>();
+    Map<CategoryItem, Menu> menu = new LinkedHashMap<>();
     public CategoryItem selectedItem = null;
-    private Menu menuParent = null;
-    /**
-     * Creates new form Category
-     */
-    public Category(Menu menu) {
+    
+     public Category() {
         initComponents();
-        menuParent = menu;
         MainScrollPane.getHorizontalScrollBar().setPreferredSize(new Dimension(0,0));
         MainScrollPane.getHorizontalScrollBar().setUnitIncrement(36);
         MainScrollPane.getViewport().setBorder(null);
         MainScrollPane.setViewportBorder(null);
         MainScrollPane.setBorder(null);
-        menuHolder.setBackground(ColorTheme.primaryColor);
-        menuPanel.setBackground(ColorTheme.primaryColor);
+        this.setBackground(ColorTheme.primaryColor);
+        categoryHolder.setBackground(ColorTheme.primaryColor);
+        categoryPanel.setBackground(ColorTheme.primaryColor);
         for (int i = 0; i < 20; i++) {
             addCategoryItem(new CategoryItem(this));
         }
@@ -43,29 +40,39 @@ public class Category extends javax.swing.JPanel {
     public void addCategoryItem(CategoryItem item)
     {
         categories.add(item);
-        menuPanel.add(item);
-        MenuHolder temp = new MenuHolder(item.getName() + categories.size() + "");
-        menuPerItem.put(item, temp);
-        menuParent.addNewMenu(temp);
+        categoryPanel.add(item);
+        Menu m = new Menu(item.getName() + categories.size() + "");
+        m.setVisible(false);
+        menuHolder.add(m);
+        menu.put(item, m);
+        menuHolder.revalidate();
+        System.out.println("ADDED MENU");
+        
     }
     
     public void changeSelectedItem(CategoryItem newSelectedItem)
     {
-        selectedItem = newSelectedItem;
-        for (Map.Entry<CategoryItem, MenuHolder> entry : menuPerItem.entrySet()) {
-            MenuHolder value = entry.getValue();
-            value.setVisible(false);
+        if(selectedItem != null)
+        {
+            Menu m = menu.get(selectedItem);
+            m.setVisible(false);
+            selectedItem = newSelectedItem;
+            Menu mm = menu.get(selectedItem);
+            mm.setVisible(true);
+        }else{
+            selectedItem = newSelectedItem;
+            Menu m = menu.get(selectedItem);
+            m.setVisible(true);
         }
-        menuPerItem.get(newSelectedItem).setVisible(true);
-        menuParent.holder.repaint();        
-        menuParent.holder.revalidate();
     }
     
     public void wipeCategoryItem()
     {
         categories.clear();
-        menuPanel.repaint();        
-        menuPanel.revalidate();
+        menu.clear();
+        categoryPanel.removeAll();
+        categoryPanel.repaint();        
+        categoryPanel.revalidate();
     }
     
     public void resetAllBackground()
@@ -84,37 +91,46 @@ public class Category extends javax.swing.JPanel {
     private void initComponents() {
 
         MainScrollPane = new javax.swing.JScrollPane();
+        categoryHolder = new javax.swing.JPanel();
+        categoryPanel = new javax.swing.JPanel();
         menuHolder = new javax.swing.JPanel();
-        menuPanel = new javax.swing.JPanel();
 
-        setMaximumSize(new java.awt.Dimension(760, 40));
-        setMinimumSize(new java.awt.Dimension(760, 40));
+        setMaximumSize(new java.awt.Dimension(700, 660));
+        setMinimumSize(new java.awt.Dimension(700, 660));
         setName(""); // NOI18N
-        setPreferredSize(new java.awt.Dimension(760, 40));
-        setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.LEFT, 0, 0));
+        setPreferredSize(new java.awt.Dimension(700, 660));
+        setRequestFocusEnabled(false);
+        setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         MainScrollPane.setToolTipText("");
         MainScrollPane.setVerticalScrollBarPolicy(javax.swing.ScrollPaneConstants.VERTICAL_SCROLLBAR_NEVER);
-        MainScrollPane.setMaximumSize(new java.awt.Dimension(760, 40));
-        MainScrollPane.setMinimumSize(new java.awt.Dimension(760, 40));
-        MainScrollPane.setPreferredSize(new java.awt.Dimension(760, 40));
+        MainScrollPane.setMaximumSize(new java.awt.Dimension(660, 40));
+        MainScrollPane.setMinimumSize(new java.awt.Dimension(660, 40));
+        MainScrollPane.setPreferredSize(new java.awt.Dimension(660, 40));
 
-        menuHolder.setMaximumSize(new java.awt.Dimension(170, 80));
-        menuHolder.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.LEFT, 0, 0));
+        categoryHolder.setMaximumSize(new java.awt.Dimension(170, 80));
+        categoryHolder.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.LEFT, 0, 0));
 
-        menuPanel.setAutoscrolls(true);
-        menuPanel.setLayout(new java.awt.GridLayout(1, 0, 5, 0));
-        menuHolder.add(menuPanel);
+        categoryPanel.setAutoscrolls(true);
+        categoryPanel.setLayout(new java.awt.GridLayout(1, 0, 5, 0));
+        categoryHolder.add(categoryPanel);
 
-        MainScrollPane.setViewportView(menuHolder);
+        MainScrollPane.setViewportView(categoryHolder);
 
-        add(MainScrollPane);
+        add(MainScrollPane, new org.netbeans.lib.awtextra.AbsoluteConstraints(21, 0, -1, -1));
+
+        menuHolder.setMaximumSize(new java.awt.Dimension(660, 600));
+        menuHolder.setMinimumSize(new java.awt.Dimension(660, 600));
+        menuHolder.setPreferredSize(new java.awt.Dimension(660, 600));
+        menuHolder.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.CENTER, 0, 0));
+        add(menuHolder, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 50, 660, 600));
     }// </editor-fold>//GEN-END:initComponents
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JScrollPane MainScrollPane;
+    private javax.swing.JPanel categoryHolder;
+    private javax.swing.JPanel categoryPanel;
     private javax.swing.JPanel menuHolder;
-    private javax.swing.JPanel menuPanel;
     // End of variables declaration//GEN-END:variables
 }

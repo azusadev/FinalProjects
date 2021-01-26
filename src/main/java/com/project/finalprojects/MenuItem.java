@@ -14,14 +14,19 @@ import java.awt.Color;
 public class MenuItem extends javax.swing.JPanel {
 
     
-    static Color defaultColor;
 
     /**
      * Creates new form CategoryItem
      */
     public MenuItem() {
         initComponents();
-        defaultColor = this.getBackground();
+        this.setBackground(ColorTheme.secondaryColor);
+    }
+    
+    public MenuItem(String content) {
+        initComponents();
+        this.setBackground(ColorTheme.secondaryColor);
+        jLabel2.setText("<html><div style='text-align: center;'>" +content + "</div></html>");
     }
 
     /**
@@ -35,30 +40,35 @@ public class MenuItem extends javax.swing.JPanel {
 
         jLabel2 = new javax.swing.JLabel();
 
-        setBackground(new java.awt.Color(105, 165, 237));
-        setPreferredSize(new java.awt.Dimension(120, 140));
+        setBackground(new java.awt.Color(51, 51, 51));
+        setMaximumSize(new java.awt.Dimension(120, 150));
+        setMinimumSize(new java.awt.Dimension(120, 150));
+        setPreferredSize(new java.awt.Dimension(120, 150));
         addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 formMouseClicked(evt);
             }
         });
 
-        jLabel2.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        jLabel2.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel2.setText("<html><div style='text-align: center;'>A Very Very Long Sentence</div></html>");
         jLabel2.setToolTipText("");
         jLabel2.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jLabel2.setMaximumSize(new java.awt.Dimension(120, 150));
+        jLabel2.setMinimumSize(new java.awt.Dimension(120, 150));
+        jLabel2.setPreferredSize(new java.awt.Dimension(120, 150));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, 207, Short.MAX_VALUE)
+            .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabel2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
     }// </editor-fold>//GEN-END:initComponents
 
