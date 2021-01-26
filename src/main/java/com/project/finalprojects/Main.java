@@ -41,8 +41,8 @@ public class Main extends javax.swing.JFrame {
     private void initComponents() {
 
         customTitleBar1 = new com.project.finalprojects.customTitleBar();
-        category1 = new com.project.finalprojects.Category();
         receipt1 = new com.project.finalprojects.Receipt();
+        menu1 = new com.project.finalprojects.Menu();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(51, 51, 51));
@@ -54,8 +54,8 @@ public class Main extends javax.swing.JFrame {
         setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
         getContentPane().add(customTitleBar1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
-        getContentPane().add(category1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 50, 740, -1));
         getContentPane().add(receipt1, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 40, -1, -1));
+        getContentPane().add(menu1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 40, -1, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -96,8 +96,8 @@ public class Main extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private com.project.finalprojects.Category category1;
     private com.project.finalprojects.customTitleBar customTitleBar1;
+    private com.project.finalprojects.Menu menu1;
     private com.project.finalprojects.Receipt receipt1;
     // End of variables declaration//GEN-END:variables
 

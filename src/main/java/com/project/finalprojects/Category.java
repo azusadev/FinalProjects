@@ -7,6 +7,10 @@ package com.project.finalprojects;
 
 import java.awt.Dimension;
 import java.util.ArrayList;
+import java.util.LinkedHashMap;
+import java.util.Map;
+import javax.swing.JPanel;
+import javax.swing.SwingUtilities;
 
 /**
  *
@@ -14,13 +18,16 @@ import java.util.ArrayList;
  */
 public class Category extends javax.swing.JPanel {
 
+    Map<CategoryItem, MenuHolder> menuPerItem = new LinkedHashMap<>();
     ArrayList<CategoryItem> categories = new ArrayList<>();
     public CategoryItem selectedItem = null;
+    private Menu menuParent = null;
     /**
      * Creates new form Category
      */
-    public Category() {
+    public Category(Menu menu) {
         initComponents();
+        menuParent = menu;
         MainScrollPane.getHorizontalScrollBar().setPreferredSize(new Dimension(0,0));
         MainScrollPane.getHorizontalScrollBar().setUnitIncrement(36);
         MainScrollPane.getViewport().setBorder(null);
@@ -37,6 +44,21 @@ public class Category extends javax.swing.JPanel {
     {
         categories.add(item);
         menuPanel.add(item);
+        MenuHolder temp = new MenuHolder(item.getName() + categories.size() + "");
+        menuPerItem.put(item, temp);
+        menuParent.addNewMenu(temp);
+    }
+    
+    public void changeSelectedItem(CategoryItem newSelectedItem)
+    {
+        selectedItem = newSelectedItem;
+        for (Map.Entry<CategoryItem, MenuHolder> entry : menuPerItem.entrySet()) {
+            MenuHolder value = entry.getValue();
+            value.setVisible(false);
+        }
+        menuPerItem.get(newSelectedItem).setVisible(true);
+        menuParent.holder.repaint();        
+        menuParent.holder.revalidate();
     }
     
     public void wipeCategoryItem()
@@ -65,15 +87,17 @@ public class Category extends javax.swing.JPanel {
         menuHolder = new javax.swing.JPanel();
         menuPanel = new javax.swing.JPanel();
 
-        setMaximumSize(new java.awt.Dimension(1200, 40));
-        setMinimumSize(new java.awt.Dimension(1200, 40));
+        setMaximumSize(new java.awt.Dimension(760, 40));
+        setMinimumSize(new java.awt.Dimension(760, 40));
         setName(""); // NOI18N
-        setPreferredSize(new java.awt.Dimension(1200, 40));
+        setPreferredSize(new java.awt.Dimension(760, 40));
         setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.LEFT, 0, 0));
 
         MainScrollPane.setToolTipText("");
         MainScrollPane.setVerticalScrollBarPolicy(javax.swing.ScrollPaneConstants.VERTICAL_SCROLLBAR_NEVER);
-        MainScrollPane.setPreferredSize(new java.awt.Dimension(1200, 40));
+        MainScrollPane.setMaximumSize(new java.awt.Dimension(760, 40));
+        MainScrollPane.setMinimumSize(new java.awt.Dimension(760, 40));
+        MainScrollPane.setPreferredSize(new java.awt.Dimension(760, 40));
 
         menuHolder.setMaximumSize(new java.awt.Dimension(170, 80));
         menuHolder.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.LEFT, 0, 0));

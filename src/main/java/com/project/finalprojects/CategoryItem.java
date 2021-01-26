@@ -110,7 +110,7 @@ public class CategoryItem extends javax.swing.JPanel{
         // TODO add your handling code here:
         if(categoryParent.selectedItem != this)
         {
-            categoryParent.selectedItem = this;
+            categoryParent.changeSelectedItem(this);
             categoryParent.resetAllBackground();
             isActive = true;
             this.setBackground(ColorTheme.highlightColor);
